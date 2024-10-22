@@ -8,10 +8,17 @@ const UserInfoModel = require('./models/UserInfo.js')
 //     host: 'dpg-csbfsk3tq21c739vrgk0-a',
 //     dialect: 'postgres',
 //     logging: false,
-//     native: false
+//     port: 5432,
 // });
 
-const sequelize = new Sequelize('dpg-csbfsk3tq21c739vrgk0-a://paterfitness_user:pass@VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m:5432/paterfitness')
+// const sequelize = new Sequelize('postgresql://paterfitness_user:VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m@dpg-csbfsk3tq21c739vrgk0-a:5432/paterfitness', {
+//     logging: false
+// })
+
+const sequelize = new Sequelize('postgresql://root:Y3fSbljGy6uaL62MqHMthpeKlHrvUmlU@dpg-csbgk5btq21c73a056b0-a/paterfitness_pejp', {
+    logging: false,
+    dialect: "postgres"
+})
 
 UserModel(sequelize)
 UserInfoModel(sequelize)
