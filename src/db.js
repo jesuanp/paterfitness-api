@@ -4,8 +4,8 @@ const { Sequelize, Op } = require('sequelize');
 const UserModel = require('./models/User.js');
 const UserInfoModel = require('./models/UserInfo.js')
 
-const sequelize = new Sequelize('paterfitness', 'postgres', 'password', {
-    host: 'localhost',
+const sequelize = new Sequelize('paterfitness', 'paterfitness_user', 'VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m', {
+    host: 'dpg-csbfsk3tq21c739vrgk0-a',
     dialect: 'postgres',
     logging: false,
     native: false
