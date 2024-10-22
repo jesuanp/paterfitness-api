@@ -4,12 +4,14 @@ const { Sequelize, Op } = require('sequelize');
 const UserModel = require('./models/User.js');
 const UserInfoModel = require('./models/UserInfo.js')
 
-const sequelize = new Sequelize('paterfitness', 'paterfitness_user', 'VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m', {
-    host: 'dpg-csbfsk3tq21c739vrgk0-a',
-    dialect: 'postgres',
-    logging: false,
-    native: false
-});
+// const sequelize = new Sequelize('paterfitness', 'paterfitness_user', 'VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m', {
+//     host: 'dpg-csbfsk3tq21c739vrgk0-a',
+//     dialect: 'postgres',
+//     logging: false,
+//     native: false
+// });
+
+const sequelize = new Sequelize('dpg-csbfsk3tq21c739vrgk0-a://paterfitness_user:pass@VwWHhPrasrSolwEwtfUTj6ouv3w8yi9m:5432/paterfitness')
 
 UserModel(sequelize)
 UserInfoModel(sequelize)
